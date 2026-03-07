@@ -23,6 +23,7 @@
     }
   </style>
 </head>
+
 <body class="bg-[#F8F9FB] min-h-screen">
 
   <nav class="bg-white border-b border-gray-200 px-8 py-3 flex items-center justify-between shadow-sm">
@@ -46,7 +47,89 @@
     </div>
   </nav>
 
-  
+  <!-- Main Section -->
+  <main class="max-w-[1100px] mx-auto mt-8 px-4 pb-12">
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-2.5">
+      <div class="flex items-center space-x-2 p-6">
+        <button
+          class="px-10 py-1.5 bg-[#4F46E5] text-white rounded-lg font-medium shadow-md cursor-pointer active:scale-95 transition-all">
+          All
+        </button>
+        <button
+          class="px-10 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-lg font-medium hover:bg-gray-50 cursor-pointer active:scale-95 transition-all">
+          Open
+        </button>
+        <button
+          class="px-10 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-lg font-medium hover:bg-gray-50 cursor-pointer active:scale-95 transition-all">
+          Closed
+        </button>
+      </div>
+    </div>
+
+    <!-- Issues Tracking -->
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+
+      <div class="p-6 flex items-center justify-between border-b border-gray-300">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center">
+            <img src="./assets/Aperture.png" alt="Aperture">
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-gray-800">50 Issues</h2>
+            <p class="text-gray-500 text-sm">Track and manage your project issues</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-6">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+            <span class="text-sm font-medium text-gray-700">Open</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-2.5 bg-purple-500 rounded-full"></span>
+            <span class="text-sm font-medium text-gray-700">Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Issues Card Section -->
+      <div id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-[#F9FAFB]">
+
+        <div
+          class="bg-white rounded-xl shadow-sm border-t-4 border-green-500 p-5 hover:shadow-md transition-shadow cursor-pointer">
+          <div class="flex justify-between items-start mb-3">
+            <div class="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center">
+              <img src="./assets/Open-Status.png" alt="Status">
+            </div>
+            <span
+              class="bg-red-100 text-red-600 text-[10px] font-semibold px-4 py-[3px] rounded-full uppercase">High</span>
+          </div>
+          <h3 class="font-bold text-gray-800 text-sm mb-2 line-clamp-2">Fix Navigation Menu On Mobile Devices</h3>
+          <p class="text-gray-500 text-xs mb-4 line-clamp-2">The navigation menu doesn't collapse properly on mobile
+            devices...</p>
+          <div class="flex gap-2.5 mb-4 items-center">
+            <span
+              class="flex items-center gap-1.5 bg-[#FFF0F0] text-[#E53E3E] text-[10px] px-3 py-1 rounded-full font-bold border border-[#FCA5A5]">
+              <img src="./assets/Bug Vector.png" alt="Bug Icon" class="w-3.5 h-3.5 object-contain"> BUG
+            </span>
+            <span
+              class="flex items-center gap-1.5 bg-[#FFFBEB] text-[#D97706] text-[10px] px-3 py-1 rounded-full font-bold border border-[#FDE68A]">
+              <img src="./assets/Help Vector.png" alt="Help Icon" class="w-3.5 h-3.5 object-contain"> HELP WANTED
+            </span>
+          </div>
+          <hr class="border-gray-100 mb-3">
+          <div class="flex justify-between text-[10px] text-gray-500 flex-col space-y-1">
+            <span>#1 by john_doe</span>
+            <span>1/15/2024</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 
 </body>
+
 </html>
