@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
   <title>Assigmnet-5</title>
   <style>
-    *{
-       font-family: "Geist", sans-serif;
+    * {
+      font-family: "Geist", sans-serif;
     }
   </style>
 </head>
+
 <body>
   <!-- Login Form -->
   <section class="bg-gray-100 flex items-center justify-center min-h-screen py-[55px]">
-    
-  
+
     <div class="bg-white w-[400px] p-8 rounded-xl shadow-lg border border-gray-200">
-  
+
       <div class="flex flex-col items-center mb-6">
         <div class="mb-4">
           <img src="./assets/github-logo.png" class="w-20 h-20" alt="GitHub Logo">
@@ -40,7 +41,7 @@
           Sign in to manage your issues
         </p>
       </div>
-  
+
       <div class="space-y-4">
         <div>
           <label class="block text-sm font-semibold text-gray-700">Username</label>
@@ -48,14 +49,24 @@
             class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
           <p class="text-[10px] text-indigo-600 mt-1 font-medium">Default: admin</p>
         </div>
-  
+
         <div>
           <label class="block text-sm font-semibold text-gray-700">Password</label>
           <input type="password" placeholder="Enter Password"
             class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
           <p class="text-[10px] text-indigo-600 mt-1 font-medium">Default: admin123</p>
         </div>
-  
+
+        <div class="flex items-center justify-between mt-4">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox"
+              class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 cursor-pointer">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-700 cursor-pointer font-medium">
+              Remember me
+            </label>
+          </div>
+        </div>
+
         <a href="./main.html" target="_blank">
           <button
             class="w-full py-2.5 bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold rounded-lg shadow-md transition-colors duration-200 cursor-pointer">
@@ -63,13 +74,13 @@
           </button>
         </a>
       </div>
-  
+
       <div class="relative flex items-center my-8">
         <div class="grow border-t border-gray-300"></div>
         <span class="shrink mx-4 text-gray-800 text-xs font-bold uppercase tracking-wider">OR</span>
         <div class="grow border-t border-gray-300"></div>
       </div>
-  
+
       <div>
         <p class="text-center text-gray-400 text-xs font-medium mb-3">
           Demo Credentials:
@@ -79,10 +90,11 @@
           <p class="text-sm text-gray-700"><span class="font-bold">Password:</span> admin123</p>
         </div>
       </div>
-  
+
     </div>
   </section>
-  
+
 
 </body>
+
 </html>
