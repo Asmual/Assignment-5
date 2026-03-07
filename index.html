@@ -42,37 +42,35 @@
         </p>
       </div>
 
+      <!-- User Input -->
       <div class="space-y-4">
         <div>
           <label class="block text-sm font-semibold text-gray-700">Username</label>
-          <input type="text" placeholder="Enter Username"
-            class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+          <input id="username-field" type="text" placeholder="Enter Username"
+            class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
           <p class="text-[10px] text-indigo-600 mt-1 font-medium">Default: admin</p>
         </div>
 
         <div>
           <label class="block text-sm font-semibold text-gray-700">Password</label>
-          <input type="password" placeholder="Enter Password"
-            class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+          <input id="password-field" type="password" placeholder="Enter Password"
+            class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
           <p class="text-[10px] text-indigo-600 mt-1 font-medium">Default: admin123</p>
         </div>
 
         <div class="flex items-center justify-between mt-4">
           <div class="flex items-center">
-            <input id="remember-me" name="remember-me" type="checkbox"
-              class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 cursor-pointer">
-            <label for="remember-me" class="ml-2 block text-sm text-gray-700 cursor-pointer font-medium">
-              Remember me
-            </label>
+            <input id="remember-me" type="checkbox"
+              class="w-4 h-4 text-indigo-600 border-gray-300 rounded cursor-pointer">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-700 cursor-pointer font-medium">Remember
+              me</label>
           </div>
         </div>
 
-        <a href="./main.html" target="_blank">
-          <button
-            class="w-full py-2.5 bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold rounded-lg shadow-md transition-colors duration-200 cursor-pointer">
-            Sign In
-          </button>
-        </a>
+        <button id="login-btn"
+          class="w-full py-2.5 bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold rounded-lg shadow-md transition-colors duration-200 cursor-pointer">
+          Sign In
+        </button>
       </div>
 
       <div class="relative flex items-center my-8">
@@ -94,7 +92,7 @@
     </div>
   </section>
 
-
+  <script src="./script.js"></script>
 </body>
 
 </html>
