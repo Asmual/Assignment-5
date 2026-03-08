@@ -216,3 +216,80 @@ closedBtn.addEventListener("click", () => {
 
   displayIssues(closedIssues);
 });
+
+
+/* Search Issues API */
+
+searchInput.addEventListener("input", async () => {
+  const searchText = searchInput.value.trim();
+
+  if (searchText === "") {
+    displayIssues(allIssues);
+    return;
+  }
+
+  showLoading();
+
+  const res = await fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`
+  );
+  const data = await res.json();
+
+  displayIssues(data.data);
+
+  hideLoading();
+});
+
+
+/* Load Single Issue */
+
+async function loadSingleIssue(id) {
+  showLoading();
+
+  const res = await fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`
+  );
+
+  const data = await res.json();
+
+  hideLoading();
+
+  openModal(data.data);
+}
+
+
+/* Open Modal */
+
+function openModal(issue) {
+
+  modal.classList.remove("hidden");
+
+  const dateObj = new Date(issue.createdAt);
+
+  const formattedDate = dateObj.toLocaleDateString("en-CA");
+
+  const formattedTime = dateObj.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true
+  });
+
+  document.getElementById("modal-title").innerText = issue.title;
+  document.getElementById("modal-description").innerText = issue.description;
+  document.getElementById("modal-author").innerText = issue.author;
+
+  document.getElementById("modal-date").innerText =
+    `${formattedDate} ${formattedTime}`;
+
+  document.getElementById("modal-assignee").innerText = issue.assignee;
+  document.getElementById("modal-priority").innerText = issue.priority;
+  document.getElementById("modal-status").innerText = issue.status;
+
+}
+
+
+/* Close Modal */
+
+function closeModal() {
+  modal.classList.add("hidden");
+}
