@@ -7,5 +7,5 @@ git remote add origin https://github.com/Asmual/Assignment-5.git
 git push -u origin main
 
 git add .
-git commit -m "Complete login page with validation logic"
+git commit -m "Tabs-Search & Modal function"
 git push -u origin main
